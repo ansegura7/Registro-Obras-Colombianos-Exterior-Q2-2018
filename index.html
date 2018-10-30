@@ -62,33 +62,34 @@
 					<h1>Readme</h1>
 
 					<h3>Datos del Proyecto – What</h3>
-					<p><b>Descripción</b>: El dataset muestra el consolidado del registro de obras protegidas por el Derecho de Autor realizado por solicitantes colombianos en el Exterior, en el 2 trimestre del 2018. Los datos están actualizados para el Julio 10 De 2018</p>
-					<p>Los datos provienen de los Datos Abiertos de Colombia <a target="_blank" href="https://www.datos.gov.co/Cultura/Registro-de-obras-por-Colombianos-en-el-Exterior-2/ags6-6cmc/data">www.datos.gov.co</a>, y es un dataset del tipo <b>Table</b>, que contiene las siguientes variables (attributes):</p>
+					<p><b>Descripción</b>: El dataset muestra el consolidado del registro de obras protegidas por el Derecho de Autor realizado por solicitantes colombianos en el Exterior, en el 2 trimestre del 2018. Los datos están actualizados hasta el 10 Julio del 2018.</p>
+					<p>Los datos provienen de los Datos Abiertos de Colombia <a target="_blank" href="https://www.datos.gov.co/Cultura/Registro-de-obras-por-Colombianos-en-el-Exterior-2/ags6-6cmc/data">www.datos.gov.co</a> y son del tipo Table, sin embargo, en la  presente visualización se procesan los datos en memoria, para convertirlos en un dataset del tipo <b>Network</b>, que contiene las siguientes variables (attributes):</p>
 					<ul>
-						<li>País: categorical.</li>
-						<li>Ciudad: categorical.</li>
-						<li>Persona que realiza el registro: categorical.</li>
-						<li>Enlace: categorical.</li>
-						<li>Cantidad Registros: ordered, quantitative, sequencial.</li>
+						<li>Items (Nodes): categorical, para los nodos Persona, Ciudad y País.</li>
+						<li>Enlaces (Links): categorical, para las relaciones Persona-Ciudad y Ciudad-País.</li>
+						<li>Cantidad (Attribute): ordered, quantitative, sequencial para el peso de los nodos y de los enlaces.</li>
+						<li>Tipo (Attribute): categorical, y puede ser Persona, Ciudad o País.</li>
 					</ul>
 
 					<h3>Objetivos del Proyecto - Why</h3>
 					<p><b>Tarea Principal</b></p>
-					<p>TP1: Crear una visualización web que permita localizar (<b>locate</b>) los caminos (<b>paths</b>) entre los distintos autores que registran obras en un mismo país.</p>
+					<p>TP1: Crear una visualización web que permita localizar (<b>locate</b>) los caminos o las rutas (<b>paths</b>) entre los distintos autores que registran obras en un mismo país (pero en distintas ciudades).</p>
 					<p><b>Tareas Secundarias</b></p>
-					<p>TS1: Explorar (<b>explore</b>) la topología (<b>topology</b>) de las ciudades o paises, con respecto a la cantidad de autores que registran obras en el extranjero.</p>
-					<p>TS2: Generar (<b>derive</b>) y contabilizar (<b>summarize</b>) la cantidad de registros de obras que hace un autor en una ciudad en el extranjero (<b>feature</b>).</p>
+					<p>TS1: Explorar (<b>explore</b>) la topología (<b>topology</b>) de las ciudades o países, con respecto a la cantidad de autores que registran obras en el extranjero.</p>
+					<p>TS2: Generar (<b>derive</b>) y contabilizar (<b>summarize</b>) la cantidad de registros de obras (copyrights) que hace un autor en una ciudad en el extranjero (<b>feature</b>).</p>
 
 					<h3>Marcas y Canales – How</h3>
 					<ul>
 						<li>Marcas: puntos para los nodos (Persona, Ciudad y País), líneas para los enlaces.</li>
 						<li>Canal - Color Hue: cada nodo tendrá un color que permitirá identificar el tipo de nodo: si es una persona, una ciudad o un país.</li>
 						<li>Canal - Posición: los nodos tienen una posición espacial en X, determinada por el peso de sus enlaces, la cual también está influenciada por una simulación de fuerzas.</li>
-						<li>How-Reduce: Aggregate.</li>
+						<li>Reduce: Aggregate.</li>
+						<li>Manipulate: Select. Se puede seleccionar un nodo, y se resaltarán los nodos vecinos con sus respectivos enlaces.</li>
 					</ul>
 					
 					<h3>Insights</h3>
 					<ul>
+						<li>Los autores Luis German Perdomo y Monica Maria Palacio, están relacionados (tienen un camino en común), ya que ambos registraron obras en USA, respectivamente en las ciudades Orlando y Miami.</li>
 						<li>Jaime Enrique Gutiérrez es el autor colombiano, que más obras registró en el extranjero (Melbourne, Australia) en el segundo trimestre del 2018 (aproximadamente 200).</li>
 						<li>La ciudad donde más distintos autores (20) colombianos registraron obras es Caracas.</li>
 						<li>Estados Unidos es el país con más distintas ciudades (5), en donde autores colombianos registraron obras.</li>
@@ -99,14 +100,13 @@
 					<ul>
 						<li>Se usó Sublime Text 3 y Notepad++ como IDEs de desarrollo.</li>
 						<li>HTML y CSS para maquetar el sitio web.</li>
-						<li>Javascript y el framework D3.js para crear los gráficos (de barras y de líneas) y la respectiva interacción con ellos.</li>
-						<li>JQuery para crear la tabla con la información del ingreso de extranjeros a Colombia por países.</li>
+						<li>Javascript y el framework D3.js v5, para crear el gráfico de Red con sus respectivas interacciones.</li>
 						<li>GitHub para almacenar el código de la Viz, y de los datos usados. A continuación, el enlace a dicho repositorio principal del proyecto: <a target="_blank" href="https://github.com/ansegura7/Registro-Obras-Colombianos-Exterior-Q2-2018">https://github.com/ansegura7</a></li>
 					</ul>
 
 					<h3>Prerrequisitos</h3>
 					<p>El proyecto depende del acceso a los datos almacenados en el repositorio previamente mencionado y a la disponibilidad del servicio de GitHub Pages, que permite el acceso por medio de un Navegador a la página principal proyecto.</p>
-					<p>Además, al usar los frameworks D3.js y JQuery, depende de que dichas librerías estén disponibles para ser usadas on-line.</p>
+					<p>Además, al usar los frameworks D3.js v5, depende de que dicha librería esté disponible para ser usadas on-line.</p>
 					
 					<h3>Uso</h3>
 					<ul>
