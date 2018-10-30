@@ -35,9 +35,11 @@ TS2: Generar (derive) y contabilizar (summarize) la cantidad de registros de obr
 - Marcas: puntos para los nodos (Persona, Ciudad y País), líneas para los enlaces.
 - Canal - Color Hue: cada nodo tendrá un color que permitirá identificar el tipo de nodo: si es una persona, una ciudad o un país.
 - Canal - Posición: los nodos tienen una posición espacial en X, determinada por el peso de sus enlaces, la cual también está influenciada por una simulación de fuerzas.
-- How-Reduce: Aggregate.
+- Reduce: Aggregate.
+- Manipulate: Select. Se puede seleccionar un nodo, y se resaltarán los nodos vecinos con sus respectivos enlaces.
 
 ## Insights
+- Los autores Luis German Perdomo y Monica Maria Palacio, están relacionados (tienen un camino en común), ya que ambos registraron obras en USA, respectivamente en las ciudades Orlando y Miami.
 - Jaime Enrique Gutiérrez es el autor colombiano, que más obras registró en el extranjero (Melbourne, Australia) en el segundo trimestre del 2018 (aproximadamente 200).
 - La ciudad donde más distintos autores (20) colombianos registraron obras es Caracas.
 - Estados Unidos es el país con más distintas ciudades (5), en donde autores colombianos registraron obras.
@@ -47,14 +49,13 @@ Para el desarrollo del proyecto se usaron las siguientes tecnologías:
 
 - Se usó Sublime Text 3 y Notepad++ como IDEs de desarrollo.
 - HTML y CSS para maquetar el sitio web.
-- Javascript y el framework D3.js para crear los gráficos (de barras y de líneas) y la respectiva interacción con ellos.
-- JQuery para crear la tabla con la información del ingreso de extranjeros a Colombia por países.
+- Javascript y el framework D3.js v5, para crear el gráfico de Red con sus respectivas interacciones.
 - GitHub para almacenar el código de la Viz, y de los datos usados. A continuación, el enlace a dicho repositorio principal del proyecto: https://github.com/ansegura7
 
 ## Prerrequisitos
 El proyecto depende del acceso a los datos almacenados en el repositorio previamente mencionado y a la disponibilidad del servicio de GitHub Pages, que permite el acceso por medio de un Navegador a la página principal proyecto.
 
-Además, al usar los frameworks D3.js y JQuery, depende de que dichas librerías estén disponibles para ser usadas on-line.
+Además, al usar el framework D3.js v5, depende de que dicha librería esté disponible para ser usada on-line.
 
 ## Uso
 - La visualización se cargará completa al ingresar su URL en un navegador web.
