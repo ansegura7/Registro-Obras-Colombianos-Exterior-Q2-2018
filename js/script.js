@@ -188,15 +188,7 @@ ast.doNetworkChart = (svg, nodes, links, xTitle, yTitle, cTitle, ordered) => {
 
 	let g = svg.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-	// Add width scale
-	g.append("g")
-		.attr("class", "axis")
-		.attr("transform", "translate(0," + (iheight*0.87) + ")")  
-		.style("font-size", "12px")
-		.call(d3.axisBottom(x)
-		.ticks(null, "0"));
-
+	
 	// Add title
 	g.append("text")
 		.attr("x", (iwidth / 2))
@@ -207,16 +199,26 @@ ast.doNetworkChart = (svg, nodes, links, xTitle, yTitle, cTitle, ordered) => {
 		.style("font-size", "16pt")
 		.text(cTitle)
 		.style("color", "steelblue");
-	
-	// text label for the x axis
-	g.append("text")
-		.attr("x", (iwidth / 2))
-		.attr("y", (iheight * 0.91))
-		.attr("dy", "1em")
-		.style("text-anchor", "middle")
-		.style("font-family", "sans-serif")
-		.style("font-size", "11pt")
-		.text(xTitle);
+
+	if (ordered) {
+		// Add width scale
+		g.append("g")
+			.attr("class", "axis")
+			.attr("transform", "translate(0," + (iheight*0.87) + ")")  
+			.style("font-size", "12px")
+			.call(d3.axisBottom(x)
+			.ticks(null, "0"));
+		
+		// text label for the x axis
+		g.append("text")
+			.attr("x", (iwidth / 2))
+			.attr("y", (iheight * 0.91))
+			.attr("dy", "1em")
+			.style("text-anchor", "middle")
+			.style("font-family", "sans-serif")
+			.style("font-size", "11pt")
+			.text(xTitle);
+	}
 
 	// Add legend
 	var legend = g.append("g")

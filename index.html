@@ -54,12 +54,6 @@
 				</div>
 				<svg id="svgNetwork1" class="svgChart" ></svg>
 				<div class="divSubTitle">Gráfico 1 - Relación entre Autores y Ciudades de Registro.</div>
-
-				<!-- Conclusion -->
-				<div class="divText" align="left">
-					<h3>Conclusiones</h3>
-					<p></p>
-				</div>
 			</div>
 
 			<div id="divReadme" align="center">
@@ -80,48 +74,24 @@
 
 					<h3>Objetivos del Proyecto - Why</h3>
 					<p><b>Tarea Principal</b></p>
-					<p>TP1: Crear una visualización web que permita comparar (<b>compare</b>) las tendencias (<b>trend</b>) de los ingresos de extranjeros a Colombia, por género y por países.</p>
+					<p>TP1: Crear una visualización web que permita localizar (<b>locate</b>) los caminos (<b>paths</b>) entre los distintos autores que registran obras en un mismo país.</p>
 					<p><b>Tareas Secundarias</b></p>
-					<p>TS1: Identificar (<b>identify</b>) valores anómalos (<b>outliers</b>) de los ingresos de extranjeros en Colombia, por meses o por años.</p>
-					<p>TS2: Sumarizar (<b>summarize</b>) el comportamiento global (<b>distribution</b> o <b>trend</b>) de todos los ingresos de personas a Colombia en el tiempo.</p>
-					<p>TS3: Por último, comparar (<b>compare</b>) específicamente el volumen (<b>distribution</b>) de ingresos de población por países para un año en específico.</p>
-					<p>TS4: Derivar (<b>derive</b>) una nueva variable (<b>feature</b>) llamado "date", a partir de la fecha y mes de cada registro. Esta variable será usada en los gráficos temporales.</p>
+					<p>TS1: Explorar (<b>explore</b>) la topología (<b>topology</b>) de las ciudades o paises, con respecto a la cantidad de autores que registran obras en el extranjero.</p>
+					<p>TS2: Generar (<b>derive</b>) y contabilizar (<b>summarize</b>) la cantidad de registros de obras que hace un autor en una ciudad en el extranjero (<b>feature</b>).</p>
 
 					<h3>Marcas y Canales – How</h3>
-					<p>Para la TP1 y la TS1 se utilizó un Multi-series Line chart con el siguiente modismo:</p>
 					<ul>
-						<li>Marcas: puntos unidos por líneas.</li>
-						<li>Canales: longitud con respecto al eje vertical, para expresar la cantidad de visitas de extranjeros. Color hue para diferenciar las categorías del género.</li>
-						<li>How-Encode: arrange express en ambos ejes.</li>
-						<li>How-Facet: múltiples curvas superpuestas.</li>
-					</ul>
-
-					<p>Para la TS2 se utilizó un Stacked Area chart con el siguiente modismo:</p>
-					<ul>
-						<li>Marcas: áreas o formas (shapes) continuas.</li>
-						<li>Canales: longitud con respecto al eje vertical, para expresar la cantidad de visitas de extranjeros. Color hue para diferenciar las categorías de los países.</li>
-						<li>How-Encode: arrange express en ambos ejes.</li>
+						<li>Marcas: puntos para los nodos (Persona, Ciudad y País), líneas para los enlaces.</li>
+						<li>Canal - Color Hue: cada nodo tendrá un color que permitirá identificar el tipo de nodo: si es una persona, una ciudad o un país.</li>
+						<li>Canal - Posición: los nodos tienen una posición espacial en X, determinada por el peso de sus enlaces, la cual también está influenciada por una simulación de fuerzas.</li>
 						<li>How-Reduce: Aggregate.</li>
 					</ul>
-
-					<p>Para la TS3 se utilizó un Horizont chart y una Table, con el siguiente modismo:</p>
-					<ul>
-						<li>Marcas: líneas horizontales.</li>
-						<li>Canales: longitud para expresar la cantidad de entradas de extranjeros al país.</li>
-						<li>How-Encode: Separete, Order y Align.</li>
-						<li>How-Reduce: Aggregate y Filter.</li>
-					</ul>
-
-					<p>La visualización cuenta con múltiples filtros (por año de análisis o tipo de gráfico) para reducir los datos y ayudar al usuario a realizar un mejor análisis.</p>
-					<p>Por último, pero no menos importante, se usó como encabezado de la Visualización un título descriptivo con imagen que llamara la atención del usuario, y todos los gráficos cuentan con título y subtítulo.</p>
 					
 					<h3>Insights</h3>
 					<ul>
-						<li>Aunque más hombres viajan hacia Colombia que mujeres (relación de 60-40), las tendencias son similares y no ha cambiado notoriamente en alguno de los géneros en los últimos años.</li>
-						<li>La mayoría de los países, han mantenido casi constante (en los últimos 6 años) su tasa de viajeros hacia Colombia por mes, excepto Venezuela, que ha aumentado considerablemente el número de entradas, de aproximadamente 40mil al mes en el 2016 a 115mil al mes en el 2018.</li>
-						<li>Hasta el 2016, USA fue el país del cual Colombia recibía más visitas por año, pero a partir del 2017, la tendencia cambió, y ahora es Venezuela.</li>
-						<li>Colombia pasó de recibir aproximadamente 150mil visitas de extranjeros al mes en el 2012 a recibir más de 310mil al mes en el 2018.</li>
-						<li>En los últimos 5 años, el Top 10 de la nacionalidad de los extranjeros que visitan a Colombia es de países del continente americano.</li>
+						<li>Jaime Enrique Gutiérrez es el autor colombiano, que más obras registró en el extranjero (Melbourne, Australia) en el segundo trimestre del 2018 (aproximadamente 200).</li>
+						<li>La ciudad donde más distintos autores (20) colombianos registraron obras es Caracas.</li>
+						<li>Estados Unidos es el país con más distintas ciudades (5), en donde autores colombianos registraron obras.</li>
 					</ul>
 
 					<h3>Tecnologías Usadas</h3>
@@ -135,15 +105,13 @@
 					</ul>
 
 					<h3>Prerrequisitos</h3>
-					<p>El proyecto depende del acceso a los datos almacenados en el repositorio https://github.com/ansegura7/Registro-Obras-Colombianos-Exterior-Q2-2018 y a la disponibilidad del servicio de GitHub Pages, que permite el acceso por medio de un Navegador a la página principal proyecto.</p>
+					<p>El proyecto depende del acceso a los datos almacenados en el repositorio previamente mencionado y a la disponibilidad del servicio de GitHub Pages, que permite el acceso por medio de un Navegador a la página principal proyecto.</p>
 					<p>Además, al usar los frameworks D3.js y JQuery, depende de que dichas librerías estén disponibles para ser usadas on-line.</p>
 					
 					<h3>Uso</h3>
 					<ul>
 						<li>La visualización se cargará completa al ingresar su URL en un navegador web.</li>
-						<li>Se puede seleccionar el año a partir del cual se mostrarán los datos de los gráficos de tiempo, en el combo-box <b>Ver datos desde</b>. Esta interacción, afectará a los gráficos 1 y 2.</li>
-						<li>Para el gráfico 3 y la tabla 1, se puede seleccionar el año de los datos, en el combo-box <b>Año de análisis</b>.</li>
-						<li>Para el gráfico 3 y la tabla 1, se puede seleccionar el tipo de gráfico entre Mensual y Anual, en el combo-box <b>Tipo de Gráfico</b>.</li>
+						<li>Se puede seleccionar el tipo de alineación de los datos, en el combo-box <b>Alineación</b>. Esta interacción, afectará al orden de los nodos en el gráfico de redes.</li>
 					</ul>
 					
 					<h3>Autores</h3>
@@ -155,9 +123,9 @@
 					<a target="_blank" href="https://github.com/ansegura7/Registro-Obras-Colombianos-Exterior-Q2-2018/tree/master/screenshots">GitHub Screenshots</a>
 
 					<h3>Links de Interés</h3>
-					<p>Video de Youtube: <a target="_blank" href="https://www.youtube.com/watch?v=nKsJC19wO_s">https://www.youtube.com/watch?v=nKsJC19wO_s</a>.</p>
-					<p>Presentación: <a target="_blank" href="https://docs.google.com/presentation/d/1uTgu2ezjly-Jgk8KbBrowOju5uIAgDq-sQZ8wjBMhGQ/edit?usp=sharing">Google Slides</a>.</p>
-					<p>Tweet: <a target="_blank" href="https://twitter.com/SeguraAndres7/status/1053102842939084800">https://twitter.com/SeguraAndres7/status/1053102842939084800</a>.</p>
+					<p>Video de Youtube: <a target="_blank" href="https://www.youtube.com">https://www.youtube.com</a>.</p>
+					<p>Presentación: <a target="_blank" href="">Google Slides</a>.</p>
+					<p>Tweet: <a target="_blank" href="https://twitter.com/SeguraAndres7">https://twitter.com/SeguraAndres7</a>.</p>
 				</div>
 
 			</div>
