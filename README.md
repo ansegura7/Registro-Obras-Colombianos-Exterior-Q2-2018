@@ -12,14 +12,14 @@
 ## Datos del Proyecto – What
 Descripción: El dataset muestra el consolidado del registro de obras protegidas por el Derecho de Autor realizado por solicitantes colombianos en el Exterior, en el 2 trimestre del 2018. Los datos están actualizados para el Julio 10 De 2018
 
-Los datos provienen de los Datos Abiertos de Colombia www.datos.gov.co, y es un dataset del tipo Table, que contiene las siguientes variables (attributes):
-- País: categorical.
-- Ciudad: categorical.
-- Persona que realiza el registro: categorical.
-- Enlace: categorical.
-- Cantidad Registros: ordered, quantitative, sequencial.
+Los datos provienen de los Datos Abiertos de Colombia www.datos.gov.co y son del tipo Table, sin embargo, en la presente visualización se procesan los datos en memoria, para convertirlos en un dataset del tipo Network, que contiene las siguientes variables (attributes):
 
-El enlace a los datos es: https://www.datos.gov.co/Cultura/Registro-de-obras-por-Colombianos-en-el-Exterior-2/ags6-6cmc/data
+- Items (Nodes): categorical, para los nodos Persona, Ciudad y País.
+- Enlaces (Links): categorical, para las relaciones Persona-Ciudad y Ciudad-País.
+- Cantidad (Attribute): ordered, quantitative, sequencial para el peso de los nodos y de los enlaces.
+- Tipo (Attribute): categorical, y puede ser Persona, Ciudad o País.
+
+El enlace a los datos originales, es: https://www.datos.gov.co/Cultura/Registro-de-obras-por-Colombianos-en-el-Exterior-2/ags6-6cmc/data
 
 ## Objetivos del Proyecto - Why
 
