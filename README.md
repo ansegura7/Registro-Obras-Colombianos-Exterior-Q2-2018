@@ -1,4 +1,4 @@
-# Registro de obras por Colombianos en el Exterior - Q2 2018
+# Registro de obras de Colombianos en el Exterior - Q2 2018
 
 ![alt text](https://raw.githubusercontent.com/ansegura7/Registro-Obras-Colombianos-Exterior-Q2-2018/master/img/main-banner.jpg)
 
