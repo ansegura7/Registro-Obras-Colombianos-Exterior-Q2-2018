@@ -10,7 +10,7 @@
 - Licencia: MIT
 
 ## Datos del Proyecto – What
-Descripción: El dataset muestra el consolidado del registro de obras protegidas por el Derecho de Autor realizado por solicitantes colombianos en el Exterior, en el 2 trimestre del 2018. Los datos están actualizados para el Julio 10 De 2018
+Descripción: El dataset muestra el consolidado del registro de obras protegidas por el Derecho de Autor realizado por solicitantes colombianos en el Exterior, en el 2 trimestre del 2018. Los datos están actualizados hasta el 10 Julio del 2018.
 
 Los datos provienen de los Datos Abiertos de Colombia www.datos.gov.co y son del tipo Table, sin embargo, en la presente visualización se procesan los datos en memoria, para convertirlos en un dataset del tipo Network, que contiene las siguientes variables (attributes):
 
@@ -24,12 +24,12 @@ El enlace a los datos originales, es: https://www.datos.gov.co/Cultura/Registro-
 ## Objetivos del Proyecto - Why
 
 ### Tarea Principal
-TP1: Crear una visualización web que permita localizar (locate) los caminos (paths) entre los distintos autores que registran obras en un mismo país.
+TP1: Crear una visualización web que permita localizar (locate) los caminos (paths) entre los distintos autores que registran obras en un mismo país (pero en distintas ciudades).
 
 ### Tareas Secundarias
-TS1: Explorar (explore) la topología (topology) de las ciudades o paises, con respecto a la cantidad de autores que registran obras en el extranjero.
+TS1: Explorar (explore) la topología (topology) de las ciudades o países, con respecto a la cantidad de autores que registran obras en el extranjero.
 
-TS2: Generar (derive) y contabilizar (summarize) la cantidad de registros de obras que hace un autor en una ciudad en el extranjero (feature).
+TS2: Generar (derive) y contabilizar (summarize) la cantidad de registros de obras (copyrights) que hace un autor en una ciudad en el extranjero (feature).
 
 ## Marcas y Canales – How
 - Marcas: puntos para los nodos (Persona, Ciudad y País), líneas para los enlaces.
