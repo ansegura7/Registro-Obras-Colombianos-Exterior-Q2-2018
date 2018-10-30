@@ -69,7 +69,7 @@ El autor de los datos es el Gobierno Nacional y el sitio web Datos Abiertos de C
 El autor de la visualización es Andrés Segura Tinoco, CE 201711582.
 
 ## Screenshot
-A continuación, se presentan unos pantallazo del proyecto:
+A continuación, se presentan unos pantallazos del proyecto:
 
 ![alt text](https://raw.githubusercontent.com/ansegura7/Registro-Obras-Colombianos-Exterior-Q2-2018/master/screenshots/Figure1.PNG)
 
